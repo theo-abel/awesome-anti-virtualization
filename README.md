@@ -48,11 +48,13 @@ These techniques can be called redpills because they are used to detect the "red
 
 Tools are divided into their respective categories (by default, all tools are in user-mode):
 
-- 🐧: Linux
-- 🪟: Windows
-- 🍏: macOS
-- 💽: raw / no OS / UEFI
-- 🚀: kernel-mode
+| Icon | Description |
+| --- | --- |
+| 🐧 | Linux |
+| 🪟 | Windows |
+| 🍏 | macOS |
+| 💽 | raw / no OS / UEFI |
+| 🚀 | kernel-mode |
 
 Start of the list:
 
@@ -82,6 +84,10 @@ Start of the list:
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
 ## :jigsaw: Techniques
+
+-
+
+<p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
 ## Contributing
 
