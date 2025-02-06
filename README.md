@@ -30,7 +30,16 @@ These techniques can be called redpills because they are used to detect the "red
 
 ### Documentation
 
--
+- [About evasion techniques - Check Point Research](https://evasions.checkpoint.com/about/) : A collection of evasion techniques used by malware to avoid detection.
+- [Detecting Hypervisor-assisted Hooking - Maurice Heumann](https://momo5502.com/posts/2022-05-02-detecting-hypervisor-assisted-hooking/), see also [Github Project EPT Hook Detection](https://github.com/momo5502/ept-hook-detection/tree/main)
+- [Evading ACPI checks in commercial virtualization platforms - Nick Peterson](https://revers.engineering/evading-trivial-acpi-checks/)
+- [How anti-cheats detect system emulation - secret.club](https://secret.club/2020/04/13/how-anti-cheats-detect-system-emulation.html)
+- [Detecting Hypervisor Presence on Windows 10 - Nick Peterson](https://revers.engineering/detecting-hypervisor-presence-on-windows-10/)
+- [7 Ways to Detect Virtualization from your VM \[Xen,VirtualBox,KVM,OpenStack with KVM\] - techglimpse.com](https://techglimpse.com/xen-kvm-virtualbox-vm-detection-command/)
+- [Playing with GuLoader Anti-VM techniques - outpost24.com](https://outpost24.com/blog/playing-with-guloader-anti-vm-techniques-malware/)
+- [Detecting VMware by reading an invalid MSR - drew](https://howtohypervise.blogspot.com/2018/09/detecting-vmware-by-reading-invalid-msr.html)
+- [Defeating malware's Anti-VM techniques (CPUID-Based Instructions) - Sina Karvandi](https://rayanfam.com/topics/defeating-malware-anti-vm-techniques-cpuid-based-instructions/)
+- [Deploy Hidden Virtual Machine For VMProtections Evasion And Dynamic Analysis - r0ttenbeef](https://r0ttenbeef.github.io/Deploy-Hidden-Virtual-Machine-For-VMProtections-Evasion-And-Dynamic-Analysis/)
 
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
@@ -100,6 +109,7 @@ Start of the list:
 - 🪟 | [Anti-VM](https://github.com/Print3M/Anti-VM) : C++ Windows-based implementation of several anti-vm techniques used in malware development.
 - 🐧 | [apate](https://github.com/vim951/apate) : Apate performs anti-debugging, anti-VM and anti-sandbox tests, to see if your linux system is able to stay under the radar.
 - 🐧 | [inside-vm](https://github.com/PicoJr/inside-vm) : Detect if code is running inside a virtual machine (x86 and x86-64 only).
+- 🪟 | [EPT Hook Detection](https://github.com/momo5502/ept-hook-detection)
 - 🪟 | [PyDefender](https://github.com/EvilBytecode/PyDefender/tree/main) : Anti Virtulization, Anti Debugging, AntiVM, Anti Virtual Machine, Anti Debug, Anti Sandboxie, Anti Sandbox, VM Detect package for Python.
 - 🪟 | [GoDefender](https://github.com/EvilBytecode/GoDefender/) : Anti Virtulization, Anti Debugging, AntiVM, Anti Virtual Machine, Anti Debug, Anti Sandboxie, Anti Sandbox, VM Detect package for Go. Windows ONLY.
 - 🐧🪟 | [Metasploit](https://www.metasploit.com/) : Open-source penetration testing framework that includes virtual machine detection modules
