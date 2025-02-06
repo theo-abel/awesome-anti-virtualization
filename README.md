@@ -87,6 +87,7 @@ Tools are divided into their respective categories (by default, all tools are in
 Start of the list:
 
 - 🐧🪟🍏 | [VMAware](https://github.com/kernelwernel/VMAware) : Easy-to-use cross-platform C++ VM detection library and tool
+- 🐧 | [Hypervisor-Phantom](https://github.com/Scrut1ny/Hypervisor-Phantom) : Advanced malware analysis tool for evading detection from advanced malware.
 - 🪟 | [Pafish](https://github.com/a0rtega/pafish) : testing tool that uses different techniques to detect virtual machines and malware analysis environments in the same way that malware families do.
 - 🪟 | [VMDE](https://github.com/hfiref0x/VMDE) : Virtual Machines Detection Enhanced, source from VMDE paper, adapted to 2015.
 - 🪟 | [Hypervision-Detection](https://github.com/void-stack/Hypervisor-Detection) : Detects virtual machines and malware analysis environments
