@@ -63,12 +63,15 @@ The following papers are sorted by publication date (newest first):
 - [An assessment of virtual machine assails](https://www.ijates.com/images/short_pdf/1421766783_P315-320.pdf) (January 2015)
 - [Cardinal Pill Testing of System Virtual Machines](https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/shi) (August 2014)
 - [An analysis of hardware-assisted virtual machine based rootkits](https://calhoun.nps.edu/server/api/core/bitstreams/9b32dd11-5ad8-4e1b-b085-f7fe27b13fc7/content) (June 2014)
-- [VMDE: Virtual Machines Detection Enhanced](https://www.heise.de/downloads/18/1/1/8/3/5/5/9/vmde.pdf)
+- [VMDE: Virtual Machines Detection Enhanced](https://www.heise.de/downloads/18/1/1/8/3/5/5/9/vmde.pdf) (November 2013)
+- [Anti-virtual machines and emulations](http://staff.ustc.edu.cn/~bjhua/courses/security/2014/readings/anti-vm2.pdf) (June 2012)
 - [Virtualization Security: Virtual Machine Monitoring and Introspection](https://cdn.ttgtmedia.com/rms/pdf/RHUL_Tsifountidis_Final.pdf) (2011)
 - [Malware Virtualization-Resistant Behavior Detection](https://ieeexplore.ieee.org/document/6121379) (December 2011)
 - [On the Impossibility of Detecting Virtual Machine Monitors](https://link.springer.com/content/pdf/10.1007/978-3-642-01244-0_13.pdf) (2009)
 - [Detecting the Presence of Virtual Machines Using the Local Data Table](https://www.ccoderun.ca/programming/2009-12-30_Virtualization/www.offensivecomputing.net_vm.pdf) (2009)
 - [Stealth sandbox analysis of malware](https://repository.bilkent.edu.tr/server/api/core/bitstreams/b40cd415-b27e-4f79-acfd-f8b06d99d439/content) (August 2009)
+- [Attacks on More Virtual Machine Emulators](https://pferrie.tripod.com/papers/attacks2.pdf) (2007), see [associated slides](http://pferrie.epizy.com/papers/attacks2.ppt)
+- [Attacks on Virtual Machine Emulators](https://www.cityu.edu.hk/its/sites/g/files/asqsls6511/files/media/inline-image/Virtual_Machine_Threats.pdf) (2007), see [associated slides](http://pferrie.epizy.com/papers/attacks.ppt)
 - [Detecting System Emulators](https://link.springer.com/chapter/10.1007/978-3-540-75496-1_1) (October 2007)
 - [On the Cutting Edge: Thwarting Virtual Machine Detection](https://handlers.sans.org/tliston/ThwartingVMDetection_Liston_Skoudis.pdf) (2006)
 - [Methods for Virtual Machine Detection](http://charette.no-ip.com:81/programming/2009-12-30_Virtualization/www.s21sec.com_vmware-eng.pdf) (June 2006)
@@ -78,6 +81,7 @@ The following papers are sorted by publication date (newest first):
 ### Media
 
 - [LISA15 - Hyperprobe: Towards Virtual Machine Extrospection](https://www.youtube.com/watch?v=dmSQ1R5WCJs)
+- [Don't Tell Joanna, The Virtualized Rootkit Is Dead](https://archive.org/details/2007_BlackHat_Vegas-V18-Ptacek-Ferrie-Lawson-Dont_Tell_Joanna), see [associated slides](http://pferrie.epizy.com/papers/vtrootkits.pdf)
 
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
@@ -124,7 +128,7 @@ Start of the list:
 
 ## :jigsaw: Techniques
 
--
+Coming soon
 
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
