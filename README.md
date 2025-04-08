@@ -127,8 +127,151 @@ Start of the list:
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
 ## :jigsaw: Techniques
+🐧
+🪟
+🍏
 
-Coming soon
+🐧🪟🍏
+
+| Technique | Description | Certainty | Platform | Reference |
+| --------- | ----------- | --------- | -------- | --------- |
+| VMID | Check CPUID output of manufacturer ID for known VMs/hypervisors at leaf 0 and 0x40000000-0x40000100 | 100% | 🐧🪟🍏 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2525
+| CPU brand | Check if CPU brand model contains any VM-specific string snippets | 50% | 🐧🪟🍏 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2545
+| Hypervisor bit | Check if hypervisor feature bit in CPUID eax bit 31 is enabled (always false for physical CPUs) | 100% | 🐧🪟🍏 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2601
+| Hypervisor string | Check for hypervisor brand string length (would be around 2 characters in a host machine) | 75% | 🐧🪟🍏 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2622
+| Timer | Check for timing anomalies in the system | 45% | 🐧🪟🍏 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L8169 
+| Thread count | Check if there are only 1 or 2 threads, which is a common pattern in VMs with default settings (nowadays physical CPUs should have at least 4 threads for modern CPUs) | 35% | 🐧🪟🍏 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2649
+| MAC address | Check if mac address starts with certain VM designated values | 20% | 🐧🪟 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2671
+| Temperature | Check if thermal directory in linux is present, might not be present in VMs | 15% | 🐧 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2804
+| Chassis vendor | Check if the chassis vendor is a VM vendor | 65% | 🐧 | https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L2671
+| Chassis type | Check if the chassis type is valid (it's very often invalid in VMs) | 20% | 🐧 | 
+| /.dockerenv | Check if /.dockerenv or /.dockerinit file is present | 30% | 🐧 | 
+| dmidecode output | Check if dmidecode output matches a VM brand | 55% | 🐧 |  
+| dmesg output | Check if dmesg output matches a VM brand | 55% | 🐧 |  
+| /sys/class/hwmon | Check if /sys/class/hwmon/ directory is present. If not, likely a VM | 35% | 🐧 | 
+| 5th sidt byte | Check if the 5th byte after sidt is null | 45% | 🐧 | 
+| DLL | Check for VM-specific DLLs | 25% | 🪟 | 
+| Registry |  Check for VM-specific registry values | 50% | 🪟 |
+| VM files | Find for VM-specific specific files | 25% | 🪟 |
+| hwmodel | Check if the sysctl for the hwmodel does not contain the "Mac" string | 100% | 🍏 |
+| Disk size | Check if disk size is under or equal to 50GB | 60% | 🐧 |
+| RAM and disk size VBox | Check for default RAM and DISK sizes set by VirtualBox | 25% | 🐧🪟 |
+| VBox network | Check for VirtualBox network provider string | 100% | 🪟 |
+| Computer name | Check if the computer name (not username to be clear) is VM-specific | 10% | 🪟 |
+| Wine file | Check wine_get_unix_file_name file for Wine | 100% | 🪟 |
+| Hostname | Check if hostname is specific | 10% | 🪟 |
+| KVM directories | Check for KVM directory "Virtio-Win" | 30% | 🪟 |
+| QEMU directories | Check for QEMU-specific blacklisted directories | 30% | 🪟 |
+| Power capabilities | Check what power states are enabled | 50% | 🪟
+| Disk drive ID | Checks for virtual machine signatures in disk drive device identifiers | 100% | 🪟 |
+| VM processes | Check for any VM processes that are active | 15% | 🪟 |
+| User and hostname | Check for default VM username and hostname for linux | 10% | 🐧 |
+| Gamarue | Check for Gamarue ransomware technique which compares VM-specific Window product IDs | 10% | 🪟 |
+| Bochs faulty CPU | Check for various Bochs-related emulation oversights through CPU checks | 100% | 🐧🪟🍏 |
+| MSSMBIOS | Check MSSMBIOS registry for VM-specific signatures | 100% | 🪟 |
+| Low memory | Check if memory is too low for MacOS system | 15% | 🍏 |
+| IO kit | Check MacOS' IO kit registry for VM-specific strings | 100% | 🍏 |
+| ioreg command | Check for VM-strings in ioreg commands for MacOS | 100% | 🍏 |
+| System Integrity Protection | Check if System Integrity Protection is disabled (likely a VM if it is) | 40% | 🍏 |
+| HKLM | Check HKLM registries for specific VM strings | 25% | 🪟 |
+| QEMU process | Check for "qemu-ga" process | 10% | 🐧 |
+| VirtualPC backdoor | Check for official VPC method | 75% | 🪟 |
+| sidt instruction | Check for sidt instruction method | 25% | 🪟 |
+| sgdt instruction | Check for sgdt instruction method | 30% | 🪟 |
+| sldt instruction | Check for sldt instruction method | 15% | 🪟 |
+| Offensive Security sidt | Check for Offensive Security SIDT method | 60% | 🪟 |
+| Offensive Security sgdt | Check for Offensive Security SGDT method | 60% | 🪟 |
+| Offensive Security sldt | Check for Offensive Security SLDT method | 20% | 🪟 |
+| VirtualPC sidt | Check for sidt method with VPC's 0xE8XXXXXX range | 15% | 🪟 |
+| VMware iomem | Check for VMware string in /proc/iomem | 65% | 🐧 |
+| VMware ioports | Check for VMware string in /proc/ioports | 70% | 🐧 |
+| VMware scsi | Check for VMware string in /proc/scsi/scsi | 40% | 🐧 |
+| VMware dmesg | Check for VMware-specific device name in dmesg output | 65% | 🐧 |
+| VMware str instruction | Check str assembly instruction method for VMware | 35% | 🪟 | 
+| VMware IO port backdoor | Check for official VMware io port backdoor technique | 100% | 🪟 | 
+| VMware memory IO port | Check for VMware memory using IO port backdoor | 85% | 🪟 | 
+| smsw instruction| Check for SMSW assembly instruction technique | 30% | 🪟 | 
+| Mutex strings | Check for mutex strings of VM brands | 85% | 🪟 |
+| Odd CPU threads | Check for odd CPU threads, usually a sign of modification through VM setting because 99% of CPUs have even numbers of threads | 80% | 🐧🪟🍏 |
+| Intel thread mismatch | Check for Intel CPU thread count database if it matches the system's thread count | 95% | 🐧🪟🍏 |
+| Xeon thread mismatch | Same as above, but for Xeon Intel CPUs | 95% | 🐧🪟🍏 |
+| Nettitude VM memory | Check for memory regions to detect VM-specific brands | 100% | 🪟 |
+| Cuckoo directory | Check for cuckoo directory using crt and WIN API directory functions | 30% | 🪟 |
+| Cuckoo pipe | Check for Cuckoo specific piping mechanism | 30% | 🪟 |
+| Hyper-V hostname | Check for default Azure hostname format regex (Azure uses Hyper-V as their base VM brand) | 30% | 🐧🪟 |
+| General hostname | Check for commonly set hostnames by certain VM brands | 10% | 🐧🪟 |
+| Screen resolution | Check for pre-set screen resolutions commonly found in VMs | 20% | 🪟 |
+| Device string | Check if bogus device string would be accepted | 25% | 🪟 |
+| BlueStacks folders |  Check for the presence of BlueStacks-specific folders | 5% | 🐧 |
+| CPUID signature | Check for signatures in leaf 0x40000001 in CPUID | 95% | 🐧🪟🍏 |
+| KVM bitmask | Check for KVM CPUID bitmask range for reserved values | 40% | 🐧🪟🍏 |
+| Intel KGT signature | Check for Intel KGT (Trusty branch) hypervisor signature in CPUID | 80% | 🐧🪟🍏 |
+| QEMU DMI | Check for presence of QEMU in the /sys/devices/virtual/dmi/id directory | 40% | 🐧 |
+| QEMU USB | Check for presence of QEMU in the /sys/kernel/debug/usb/devices directory | 20% | 🐧 |
+| Hypervisor directory | Check for presence of any files in /sys/hypervisor directory | 20% | 🐧 |
+| User Mode Linux CPU | Check for the "UML" string in the CPU brand | 80% | 🐧 |
+| kmsg logs | Check for any indications of hypervisors in the kernel message logs | 5% | 🐧 |
+| Xen VM processes | Check for a Xen VM process | 10% | 🐧 |
+| VBox kernel module | Check for a VBox kernel module | 15% | 🐧 |
+| sysinfo process | Check for potential VM info in /proc/sysinfo | 15% | 🐧 |
+| Device tree | Check for specific files in /proc/device-tree directory | 20% | 🐧 |
+| DMI scan | Check for string matches of VM brands in the linux DMI | 50% | 🐧 |
+| SMBIOS VM bit | Check for the VM bit in the SMBIOS data | 50% | 🐧 |
+| Podman file | Check for podman file in /run/ | 5% | 🐧 |
+| WSL process | Check for WSL or microsoft indications in /proc/ subdirectories | 30% | 🐧 |
+| ANY.RUN driver | Check for any.run driver presence | 65% | 🪟 |
+| ANY.RUN directory | Check for any.run directory and handle the status code | 35% | 🪟 |
+| Driver names | Check for VM-specific names for drivers | 100% | 🪟 |
+| sidt base | Check for unknown IDT base address | 100% | 🪟 |
+| HDD serial | Check for serial numbers of virtual disks | 100% | 🪟 |
+| Port connections | Check for physical connection ports | 25% | 🪟 |
+| GPU capabilities | Check for GPU capabilities related to VMs | 100% | 🪟 |
+| GPU VM strings | Check for specific GPU string signatures related to VMs | 100% | 🪟 |
+| VM devices | Check for VM-specific devices | 45% | 🪟 |
+| idt and GDT scan | Check if the IDT and GDT virtual base addresses are equal across different CPU cores when not running under Hyper-V | 50% | 🪟 |
+| Processor count | Check for number of processors | 50% | 🪟 |
+| Core count | Check for number of cores | 50% | 🪟 |
+| ACPI temperature | Check for device's temperature | 25% | 🪟 |
+| Processor ID | Check if any processor has an empty Processor ID using SMBIOS data | 25% | 🪟 |
+| QEMU /sys/ | Check for existence of "qemu_fw_cfg" directories within /sys/module and /sys/firmware | 70% | 🐧 |
+| lshw QEMU | Check for QEMU string instances with lshw command | 80% | 🐧 |
+| Virtual processors | Check if the number of virtual and logical processors are reported correctly by the system | 50% | 🪟 |
+| Hyper-V query | Check if a call to NtQuerySystemInformation with the 0x9f leaf fills a _SYSTEM_HYPERVISOR_DETAIL_INFORMATION structure | 100% | 🪟 |
+| VM memory pools | Check for system pools allocated by hypervisors | 80% | 🪟 |
+| AMD SEV | Check for AMD-SEV MSR running on the system | Linux and MacOS | 50% | 🐧🍏 |
+| AMD thread count mismatch | Check for AMD CPU thread count database if it matches the system's thread count | 95% | 🐧🪟🍏 |
+| Native VHD | Check for OS being booted from a VHD container | 100% | 🪟 |
+| Virtual registry | Check for particular object directory which is present in Sandboxie virtual environment but not in usual host systems | 65% | 🪟 |
+| Firmware signatures | Check for VM signatures and patched strings by hardeners in firmware, while ensuring the BIOS serial is valid | 75% | 🪟🐧 |
+| File access history | Check if the number of accessed files are too low for a human-managed environment | 15% | 🐧 |
+| Audio device | Check if audio device is present | 25% | 🪟 |
+| Unrecognised x86 CPU manufacturer | Check if the CPU manufacturer is not known | 50% | 🐧🪟🍏 |
+| OSXSAVE | Check if running xgetbv in the XCR0 extended feature register triggers an exception | 50% | 🪟 |
+| nsjail PID | Check if process status matches with nsjail patterns with PID anomalies | 75% | 🐧 |
+| PCIe bridge name | Check for PCIe bridge names for known VM keywords and brands | 100% | 🐧 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
