@@ -245,29 +245,6 @@ Start of the list:
 | nsjail PID | Check if process status matches with nsjail patterns with PID anomalies | 75% | 🐧 | [link](https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L10083) |
 | PCIe bridge name | Check for PCIe bridge names for known VM keywords and brands | 100% | 🐧 | [link](https://github.com/kernelwernel/VMAware/blob/8cb2491b1c7d2cb7300d1d698b7c64c953b4ae75/src/vmaware.hpp#L10142) |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
 ## Contributing
