@@ -105,8 +105,9 @@ The following papers are sorted by publication date (newest first):
 
 ### Media
 
-- [LISA15 - Hyperprobe: Towards Virtual Machine Extrospection](https://www.youtube.com/watch?v=dmSQ1R5WCJs)
-- [Don't Tell Joanna, The Virtualized Rootkit Is Dead](https://archive.org/details/2007_BlackHat_Vegas-V18-Ptacek-Ferrie-Lawson-Dont_Tell_Joanna), see [associated slides](http://pferrie.epizy.com/papers/vtrootkits.pdf)
+- [Countering Anti-Debugging Techniques: Enhancing Transparency in Nested Virtualization using HyperDbg](https://github.com/HyperDbg/slides/blob/main/2025/DEBT2025/hyperevade-ecoop2025-debt.pdf) (slides only) (July 2025)
+- [LISA15 - Hyperprobe: Towards Virtual Machine Extrospection](https://www.youtube.com/watch?v=dmSQ1R5WCJs) (December 2021)
+- [Don't Tell Joanna, The Virtualized Rootkit Is Dead](https://archive.org/details/2007_BlackHat_Vegas-V18-Ptacek-Ferrie-Lawson-Dont_Tell_Joanna), see [associated slides](http://pferrie.epizy.com/papers/vtrootkits.pdf) (2007)
 
 <p align="center"><a href="#contents"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
